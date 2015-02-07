@@ -134,21 +134,12 @@ function getClickCount() {
 
 function refreshTwitter() {
     $('.twitter-container iframe').remove();
-    $('.twitter-container').html('<a class="twitter-share-button" data-count="none" data-text="I Rik Clicked ' + getClickCount() + ' times with The Last Hurrah!" data-via="The Last Hurrah" href="https://twitter.com/share">Tweet your RikClicks</a>');
+    $('.twitter-container').html('<a class="twitter-share-button" data-count="none" data-text="I Rik Clicked ' + getClickCount() + ' times with The Last Hurrah!" href="https://twitter.com/share">Tweet your RikClicks</a>');
     if(twttr && twttr.widgets) {
         twttr.widgets.load();
     }
 }
 
-
-function openFbPopUp() {
-    FB.ui({
-        method: 'share',
-        href: 'https://developers.facebook.com/docs/'
-    }, function(response){
-
-    });
-}
 
 
   window.fbAsyncInit = function() {
