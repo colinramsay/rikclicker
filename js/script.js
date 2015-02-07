@@ -91,7 +91,7 @@ var setCookie = function(c_name,value,exdays) {
 function updateImage() {
     var num = Math.floor(Math.random() * clickerImages.length);
 
-    $('#click-target img').attr('src', '/img/randoms/' + clickerImages[num]);
+    $('#click-target img').attr('src', 'img/randoms/' + clickerImages[num]);
 }
 
 
@@ -142,7 +142,7 @@ $(function() {
 
 soundManager.setup({
 
-    url: '/swf/',
+    url: 'swf/',
     flashVersion: 9,
     preferFlash: false,
     debugMode: true,
