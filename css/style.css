@@ -6,7 +6,9 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
-body { background: black;}
+body { background: black; margin-bottom: 50px;}
+
+h1 { font-family: 'Arial'; font-weight: bold; letter-spacing: -1px; color: #D72C14; text-transform: uppercase; text-align: center; margin: 20px;}
 
 .container { margin: 20px auto 20px auto; width: 30%;     position: relative;}
 #click-target     { margin: 0; position: relative; width: 100%;  border: 8px solid #D72C14; border-radius: 3px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; }
@@ -51,7 +53,9 @@ footer a {
 
 @media only screen and (max-width: 767px) {
 
-
+  h1 {
+    margin: 10px 0;
+  }
   #click-target {
     border: 0;
   }
