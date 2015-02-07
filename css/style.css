@@ -13,7 +13,7 @@ body { background: black;}
 #click-target img    { cursor: pointer; width: 100%; border: 0; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; }
 
 .progress {
-  background: red;
+  background: #D72C14;
   width: 100%;
   position: absolute;
   height: 1px;
