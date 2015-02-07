@@ -1,34 +1,55 @@
-var clickerSounds = ['A BIENTOT.mp3',
+var clickerSounds = [
+'A BIENTOT.mp3',
+'ANAL FLAP.mp3',
 'ANAL SCAB.mp3',
+'ANIMAL ONE.mp3',
+'ANIMAL TWO.mp3',
 'ARSE TO MOUTH.mp3',
 'BIBAMUS.mp3',
+'BOLLOCKSY.mp3',
 'BONJOUR.mp3',
 'BURST RECTUM.mp3',
 'BURST.mp3',
+'CAESAR.mp3',
 'CASH.mp3',
+'CELEBRITY WANKAHOLIC.mp3',
+'CHARITY WANK.mp3',
+'CHEER.mp3',
 'CHEESE STRING.mp3',
+'CHILDREN.mp3',
+'CONTROVERSY.mp3',
 'COUGH.mp3',
 'DAS KAPITAL.mp3',
+'DOPPELGANGER.mp3',
 'EFFING LINE.mp3',
 'EVIL LAUGH.mp3',
+'FACSIT GOLFERS.mp3',
 'FORGET.mp3',
 'FOUL MUTT.mp3',
 'FUCKING FABIO.mp3',
 'FUCKSTICKS.mp3',
+'GO AWAY.mp3',
 'GOEBBELS.mp3',
 'GOLLY.mp3',
+'GOOD LORD.mp3',
 'GRUNT AND GROAN.mp3',
+'GRUNT.mp3',
+'HORSE COCK.mp3',
 'HUZZAH.mp3',
+'JOKE.mp3',
 'LEFTY.mp3',
 'LIE!.mp3',
 'LIMP.mp3',
 'MLUD.mp3',
 'MARVELOUS.mp3',
+'MMMMM.mp3',
 'MONEY.mp3',
 'MR LUCKY.mp3',
 'NAUGHTY GIRL.mp3',
 'NAZI GOLD.mp3',
+'NO CHANCE.mp3',
 'OF COURSE.mp3',
+'OH WELL.mp3',
 'OLD SNOW.mp3',
 'OOMPAH.mp3',
 'PITY.mp3',
@@ -36,11 +57,15 @@ var clickerSounds = ['A BIENTOT.mp3',
 'PRAWN.mp3',
 'PRICK ON A',
 'PUBIC WIG.mp3',
+'PURPLE.mp3',
+'RAPE ALARM.mp3',
 'RAZTENBERGER.mp3',
+'RAZZLE.mp3',
 'REAL EYES.mp3',
 'RUBY.mp3',
 'SATAN SHITHOLE.mp3',
 'SATISFYINGLY.mp3',
+'SAUSAGE.mp3',
 'SCREAM.mp3',
 'SHANDY.mp3',
 'SHIT.mp3',
@@ -48,14 +73,22 @@ var clickerSounds = ['A BIENTOT.mp3',
 'SNOWMAN.mp3',
 'TA DA.mp3',
 'TASERING.mp3',
+'UNDERPANTS.mp3',
+'VAG FEST.mp3',
 'VEG.mp3',
 'VOILA.mp3',
+'WANDY 1.mp3',
 'WE ARRIVE.mp3',
 'WHAT.mp3',
 'WHERE ARE WE.mp3',
 'WHO THE FUCK.mp3',
+'WICKED LAUGH.mp3',
+'WINKIES.mp3',
+'WOOF.mp3',
 'YES.mp3',
-'YOU FUCKING ARE.mp3'];
+'YOU FUCKING ARE.mp3',
+'ZEBRA COCK.mp3'
+];
 
 var clickerImages = [
     '20130301-SCP001-TheLastHurrah-Rik-4310.jpg',
@@ -135,78 +168,82 @@ function openFbPopUp() {
    }(document, 'script', 'facebook-jssdk'));
 
 
+startApp();
 
-$(function() {
-    refreshTwitter();
-});
+function startApp() {
 
-soundManager.setup({
+    $(function() {
+        refreshTwitter();
+    });
 
-    url: 'swf/',
-    flashVersion: 9,
-    preferFlash: false,
-    debugMode: true,
+    soundManager.setup({
 
-    onready: function() {
+        url: 'swf/',
+        flashVersion: 9,
+        preferFlash: false,
+        debugMode: true,
 
-        var play = function(file) {
-            soundManager.stopAll();
-            soundManager.destroySound(file);
+        onready: function() {
 
-            // if(sound) {
-            //     console.debug(sound);
-            //     soundManager.setPosition(file, 0);
-            //     soundManager.resume(file);
-            //     return;
-            // }
+            var play = function(file) {
+                soundManager.stopAll();
+                soundManager.destroySound(file);
 
-            soundManager.createSound({
-              id: file,
-              url: file,
-              autoLoad: true,
-              autoPlay: true,
-              onload: function() {
-                    //alert('The sound '+this.sID+' loaded!');
-              },
-              onerror: function() {
-                console.log(arguments);
-              },
-              whileplaying: function() {
-                var val = (this.position / this.duration) * 100;
-                console.log(val);
-                $('.progress').css('width', val + '%');
-              },
-              volume: 50
+                // if(sound) {
+                //     console.debug(sound);
+                //     soundManager.setPosition(file, 0);
+                //     soundManager.resume(file);
+                //     return;
+                // }
+
+                soundManager.createSound({
+                  id: file,
+                  url: file,
+                  autoLoad: true,
+                  autoPlay: true,
+                  onload: function() {
+                        //alert('The sound '+this.sID+' loaded!');
+                  },
+                  onerror: function() {
+                    console.log(arguments);
+                  },
+                  whileplaying: function() {
+                    var val = (this.position / this.duration) * 100;
+                    console.log(val);
+                    $('.progress').css('width', val + '%');
+                  },
+                  volume: 50
+                });
+            };
+
+            $("#counter").flipCounter({
+                number: getClickCount(), // the initial number the counter should display, overrides the hidden field
+                numIntegralDigits:1, // number of places left of the decimal point to maintain
+                numFractionalDigits:0, // number of places right of the decimal point to maintain
+                digitClass:"counter-digit", // class of the counter digits
+                counterFieldName:"counter-value", // name of the hidden field
+                digitHeight:40, // the height of each digit in the flipCounter-medium.png sprite image
+                digitWidth:30, // the width of each digit in the flipCounter-medium.png sprite image
+                imagePath:"img/flipCounter-medium.png", // the path to the sprite image relative to your html document
+                easing: 'easeOutQuad', // the easing function to apply to animations, you can override this with a jQuery.easing method
+                duration:10000
             });
-        };
 
-        $("#counter").flipCounter({
-            number: getClickCount(), // the initial number the counter should display, overrides the hidden field
-            numIntegralDigits:1, // number of places left of the decimal point to maintain
-            numFractionalDigits:0, // number of places right of the decimal point to maintain
-            digitClass:"counter-digit", // class of the counter digits
-            counterFieldName:"counter-value", // name of the hidden field
-            digitHeight:40, // the height of each digit in the flipCounter-medium.png sprite image
-            digitWidth:30, // the width of each digit in the flipCounter-medium.png sprite image
-            imagePath:"img/flipCounter-medium.png", // the path to the sprite image relative to your html document
-            easing: 'easeOutQuad', // the easing function to apply to animations, you can override this with a jQuery.easing method
-            duration:10000
-        });
+            $('#click-target').on('click', function() {
+                updateImage();
+                var curr = $("#counter").flipCounter("getNumber") + 1,
+                    num = Math.floor(Math.random() * clickerSounds.length);
 
-        $('#click-target').on('click', function() {
-            updateImage();
-            var curr = $("#counter").flipCounter("getNumber") + 1,
-                num = Math.floor(Math.random() * clickerSounds.length);
+                $("#counter").flipCounter("setNumber", curr);
+                $('.progress').css('transition', null);
+                $('.progress').css('width', 0);
+                $('.progress').css('transition', 'width 0.2s');
 
-            $("#counter").flipCounter("setNumber", curr);
-            $('.progress').css('transition', null);
-            $('.progress').css('width', 0);
-            $('.progress').css('transition', 'width 0.2s');
+                play('sound/' + clickerSounds[num]);
+                setCookie(COOKIE_KEY, curr, 30);
+                refreshTwitter();
+            });
+        }
+    });
 
-            play('sound/' + clickerSounds[num]);
-            setCookie(COOKIE_KEY, curr, 30);
-            refreshTwitter();
-        });
-    }
-});
-
+}
