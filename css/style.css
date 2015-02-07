@@ -63,6 +63,6 @@ footer a {
   .container {
     width: 100%;
     margin: 0 0 10px 0;
-    border: 10px solid #D72C14; border-radius: 3px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px;
+    border: 6px solid #D72C14; border-radius: 3px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px;
   }
 }
