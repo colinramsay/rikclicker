@@ -24,15 +24,11 @@ h1 { font-family: 'Arial'; font-weight: bold; letter-spacing: -1px; color: #D72C
 
 #counter {
   margin: 0 auto 5% auto;
-   width: 100%;
+  width: 100%;
   text-align: center;
+  position: absolute;
+  margin-top: -48px;
 }
-
-  #counter {
-    position: absolute;
-    z-index: 101;
-    margin-top: -48px;
-  }
 
 
 footer {
@@ -52,6 +48,10 @@ footer a {
 }
 
 @media only screen and (max-width: 767px) {
+
+  #counter {
+    margin-top: -40px;
+  }
 
   h1 {
     margin: 10px 0;
