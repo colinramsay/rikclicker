@@ -113,10 +113,16 @@ var ClickCounter = {
 
     startApp: function() {
 
+        var clickCount = ClickCounter.getClickCount();
+
+        if(clickCount === 0) {
+            $('.tip').show();
+        }
+
         ClickCounter.preloadImages(ClickCounter.IMAGES);
 
         $('#counter').flipCounter({
-            number: ClickCounter.getClickCount(),
+            number: clickCount,
             numIntegralDigits:1,
             numFractionalDigits:0,
             digitClass:"counter-digit",
