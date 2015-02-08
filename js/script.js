@@ -26,6 +26,26 @@ var ClickCounter = {
         }
     },
 
+    preloadImages: function(array) {
+        if (!ClickCounter.preloadImages.list) {
+            ClickCounter.preloadImages.list = [];
+        }
+        var list = ClickCounter.preloadImages.list;
+        for (var i = 0; i < array.length; i++) {
+            var img = new Image();
+            img.onload = function() {
+                var index = list.indexOf(this);
+                if (index !== -1) {
+                    // remove image from the array once it's loaded
+                    // for memory consumption reasons
+                    list.splice(index, 1);
+                }
+            };
+            list.push(img);
+            img.src = 'img/randoms/' + array[i];
+        }
+    },
+
 
     updateImage: function() {
         var num = Math.floor(Math.random() * ClickCounter.IMAGES.length);
@@ -92,6 +112,8 @@ var ClickCounter = {
 
 
     startApp: function() {
+
+        ClickCounter.preloadImages(ClickCounter.IMAGES);
 
         $('#counter').flipCounter({
             number: ClickCounter.getClickCount(),
