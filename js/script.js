@@ -90,7 +90,7 @@ var ClickCounter = {
     },
 
     onClick: function() {
-        $('#click-target img').fadeTo('fast', 0.5);
+        $('#click-target img').fadeTo('fast', 0);
 
         var curr = $('#counter').flipCounter('getNumber') + 1,
             num = Math.floor(Math.random() * ClickCounter.SOUNDS.length);
