@@ -78,6 +78,7 @@ var ClickCounter = {
           autoLoad: true,
           autoPlay: true,
           onload: function() {
+            ClickCounter.updateImage();
             $('#click-target img').fadeTo('fast', 1);
           },
           whileplaying: function() {
@@ -91,7 +92,6 @@ var ClickCounter = {
     onClick: function() {
         $('#click-target img').fadeTo('fast', 0.5);
 
-        ClickCounter.updateImage();
         var curr = $('#counter').flipCounter('getNumber') + 1,
             num = Math.floor(Math.random() * ClickCounter.SOUNDS.length);
 
