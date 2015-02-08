@@ -14,6 +14,21 @@ h1 { font-family: 'Arial'; font-weight: bold; letter-spacing: -1px; color: #D72C
 #click-target     { margin: 0; position: relative; width: 100%;  border: 8px solid #D72C14; border-radius: 3px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; }
 #click-target img    { cursor: pointer; width: 100%; border: 0; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; }
 
+.loading {
+  display: none;
+  color: #666;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  width: 100px;
+  margin-left: -50px;
+  left: 50%;
+  right: 50%;
+  font-family: sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
 .tip {
   display: none;
   color: #D72C14;
