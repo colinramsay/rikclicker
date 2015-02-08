@@ -1,5 +1,5 @@
 var ClickCounter = {
-    SOUNDS: ['A BIENTOT.mp3', 'ANAL FLAP.mp3', 'ANAL SCAB.mp3', 'ANIMAL ONE.mp3', 'ANIMAL TWO.mp3', 'ARSE TO MOUTH.mp3', 'BIBAMUS.mp3', 'BOLLOCKSY.mp3', 'BONJOUR.mp3', 'BURST RECTUM.mp3', 'BURST.mp3', 'CAESAR.mp3', 'CASH.mp3', 'CELEBRITY WANKAHOLIC.mp3', 'CHARITY WANK.mp3', 'CHEER.mp3', 'CHEESE STRING.mp3', 'CHILDREN.mp3', 'CONTROVERSY.mp3', 'COUGH.mp3', 'DAS KAPITAL.mp3', 'DOPPELGANGER.mp3', 'EFFING LINE.mp3', 'EVIL LAUGH.mp3', 'FACSIT GOLFERS.mp3', 'FORGET.mp3', 'FOUL MUTT.mp3', 'FUCKING FABIO.mp3', 'FUCKSTICKS.mp3', 'GO AWAY.mp3', 'GOEBBELS.mp3', 'GOLLY.mp3', 'GOOD LORD.mp3', 'GRUNT AND GROAN.mp3', 'GRUNT.mp3', 'HORSE COCK.mp3', 'HUZZAH.mp3', 'JOKE.mp3', 'LEFTY.mp3', 'LIE!.mp3', 'LIMP.mp3', 'MLUD.mp3', 'MARVELOUS.mp3', 'MMMMM.mp3', 'MONEY.mp3', 'MR LUCKY.mp3', 'NAUGHTY GIRL.mp3', 'NAZI GOLD.mp3', 'NO CHANCE.mp3', 'OF COURSE.mp3', 'OH WELL.mp3', 'OLD SNOW.mp3', 'OOMPAH.mp3', 'PITY.mp3', 'PLUCK AND STIFFEN.mp3', 'PRAWN.mp3', 'PRICK ON A', 'PUBIC WIG.mp3', 'PURPLE.mp3', 'RAPE ALARM.mp3', 'RAZTENBERGER.mp3', 'RAZZLE.mp3', 'REAL EYES.mp3', 'RUBY.mp3', 'SATAN SHITHOLE.mp3', 'SATISFYINGLY.mp3', 'SAUSAGE.mp3', 'SCREAM.mp3', 'SHANDY.mp3', 'SHIT.mp3', 'SHUT UP.mp3', 'SNOWMAN.mp3', 'TA DA.mp3', 'TASERING.mp3', 'UNDERPANTS.mp3', 'VAG FEST.mp3', 'VEG.mp3', 'VOILA.mp3', 'WANDY 1.mp3', 'WE ARRIVE.mp3', 'WHAT.mp3', 'WHERE ARE WE.mp3', 'WHO THE FUCK.mp3', 'WICKED LAUGH.mp3', 'WINKIES.mp3', 'WOOF.mp3', 'YES.mp3', 'YOU FUCKING ARE.mp3', 'ZEBRA COCK.mp3'],
+    SOUNDS: ['A-BIENTOT.mp3', 'ANAL-FLAP.mp3', 'ANAL-SCAB.mp3', 'ANIMAL-ONE.mp3', 'ANIMAL-TWO.mp3', 'ANUS_on_SEA.mp3', 'ARSE-TO-MOUTH.mp3', 'BIBAMUS.mp3', 'BLAIR.mp3', 'BOLLOCKSY.mp3', 'BONJOUR.mp3', 'BURST-RECTUM.mp3', 'BURST.mp3', 'CAESAR.mp3', 'CASH.mp3', 'CELEBRITY-WANKAHOLIC.mp3', 'CHARITY-WANK.mp3', 'CHATEAU.mp3', 'CHEER.mp3', 'CHEESE-STRING.mp3', 'CHILDREN.mp3', 'CONTROVERSY.mp3', 'COUGH.mp3', 'CUNTFACE.mp3', 'DADDY.mp3', 'DAS-KAPITAL.mp3', 'DOPPELGANGER.mp3', 'ED.mp3', 'EFFING-LINE.mp3', 'EVIL-LAUGH.mp3', 'FACSIT-GOLFERS.mp3', 'FORGET.mp3', 'FOUL-MUTT.mp3', 'FUCKING-FABIO.mp3', 'FUCKSTICKS.mp3', 'GO-AWAY.mp3', 'GOEBBELS.mp3', 'GOLLY.mp3', 'GOOD-LORD.mp3', 'GRUNT-AND-GROAN.mp3', 'GRUNT.mp3', 'HORSE-COCK.mp3', 'HORSEFLSH.mp3', 'HUZZAH.mp3', 'JOKE.mp3', 'LATRINES.mp3', 'LEFTY.mp3', 'LIE!.mp3', 'LIMP.mp3', 'LOO.mp3', 'LOVE.mp3', 'MARVELOUS.mp3', 'MLUD.mp3', 'MMMMM.mp3', 'MONEY.mp3', 'MR-LUCKY.mp3', 'NAUGHTY-GIRL.mp3', 'NAZI-GOLD.mp3', 'NHS.mp3', 'NO-CHANCE.mp3', 'NO.mp3', 'OF-COURSE.mp3', 'OH-WELL.mp3', 'OLD-HEART.mp3', 'OLD-SNOW.mp3', 'OOMPAH.mp3', 'PALACE.mp3', 'PILOTS.mp3', 'PITY.mp3', 'PLUCK-AND-STIFFEN.mp3', 'PRAWN.mp3', 'PRICK-ON-A-DARTBOARD.mp3', 'PUBIC-WIG.mp3', 'PUPPY-JAZZ.mp3', 'PURPLE.mp3', 'QUEEN-MUM.mp3', 'RAPE-ALARM.mp3', 'RAZTENBERGER.mp3', 'RAZZLE.mp3', 'REAL-EYES.mp3', 'RIGHT-ON.mp3', 'RUBY.mp3', 'SATAN-SHITHOLE.mp3', 'SATISFYINGLY.mp3', 'SAUSAGE.mp3', 'SCREAM.mp3', 'SEX-NOIZE.mp3', 'SHANDY.mp3', 'SHIT.mp3', 'SHUT-UP.mp3', 'SNOWMAN.mp3', 'SPIRIT.mp3', 'TA-DA.mp3', 'TASERING.mp3', 'TWAT.mp3', 'UNCLE.mp3', 'UNDERPANTS.mp3', 'VAG-FEST.mp3', 'VEG.mp3', 'VIAGRA.mp3', 'VOILA.mp3', 'VOL_AU_VENT.mp3', 'WANDY-1.mp3', 'WE-ARRIVE.mp3', 'WHAT.mp3', 'WHERE-ARE-WE.mp3', 'WHO-THE-FUCK.mp3', 'WICKED-LAUGH.mp3', 'WINKIES.mp3', 'WOOF.mp3', 'YES.mp3', 'YOU-FUCKING-ARE.mp3', 'ZEBRA-COCK.mp3', 'human_poo.mp3', 'nora.mp3', 'squirt.mp3'],
     IMAGES: ['20130301-SCP001-TheLastHurrah-Rik-4310.jpg', '20130301-SCP001-TheLastHurrah-Rik-4327.jpg', '20130301-SCP001-TheLastHurrah-Rik-7792.jpg', '20130301-SCP001-TheLastHurrah-Rik-7812.jpg', '20130301-SCP001-TheLastHurrah-Rik-7837.jpg', '20130301-SCP001-TheLastHurrah-Rik-7947.jpg'],
     COOKIE_KEY: 'click-counter',
 
@@ -57,6 +57,9 @@ var ClickCounter = {
           url: file,
           autoLoad: true,
           autoPlay: true,
+          onload: function() {
+            $('#click-target img').fadeTo('fast', 1);
+          },
           whileplaying: function() {
             var val = (this.position / this.duration) * 100;
             $('.progress').css('width', val + '%');
@@ -66,6 +69,8 @@ var ClickCounter = {
     },
 
     onClick: function() {
+        $('#click-target img').fadeTo('fast', 0.5);
+
         ClickCounter.updateImage();
         var curr = $('#counter').flipCounter('getNumber') + 1,
             num = Math.floor(Math.random() * ClickCounter.SOUNDS.length);
