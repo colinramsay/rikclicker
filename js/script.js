@@ -111,6 +111,15 @@ var ClickCounter = {
     },
 
 
+    trackOutboundLink: function(url) {
+        ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+            function() {
+                document.location = url;
+            }
+        });
+    },
+
+
     startApp: function() {
 
         var clickCount = ClickCounter.getClickCount();
@@ -133,6 +142,8 @@ var ClickCounter = {
             easing: 'easeOutQuad',
             duration:10000
         });
+
+        $('.tla-outbound').click(ClickCounter.trackOutboundLink);
 
         ClickCounter.refreshTwitter();
 
